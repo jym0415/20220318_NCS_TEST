@@ -5,7 +5,9 @@
   "main": "jym.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" :"nodemon jym.js"
+    "server" :"nodemon jym.js",
+    "react" : "cd front && npm start",
+    "start" : "concurrently --kill-others-on-fail \"npm run server\" \"npm run react\" "
   },
   "author": "",
   "license": "ISC",

@@ -9,7 +9,7 @@ router.get('/',(req,res) => {
 })
 
 router.get('/getjson',(req,res) => {
-    res.send({'url': '/getsend/getjson'});
+    res.send({'url': '/getsend/getjson value값'});
 })
 
 router.post('/post',(req,res) => {

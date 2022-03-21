@@ -15,7 +15,7 @@ router.get('/',(req, res, next) => {//요청,응답,미들웨어or라우트
     var botable = req.query.botable; //~~~~?botable=content_interview
     if(botable == 'preinterview'){
         pool.getConnection(function(err, connection){
-            connection.query('SELECT * FROM introduce.' + botable, 
+            connection.query('SELECT * FROM introduce.'+botable, 
             (error, rows) => {
                 if(error) throw error;
                 // console.log('해당스키마안의 테이블 내용 : ', rows);
@@ -31,7 +31,6 @@ router.get('/',(req, res, next) => {//요청,응답,미들웨어or라우트
         
       
 })
-
 
 
 module.exports = router;

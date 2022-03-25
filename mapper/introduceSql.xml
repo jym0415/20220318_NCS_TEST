@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="IntrodueSql">
+    <select id="interview">
+    select 
+        *
+    FROM introduce.preinterview
+    </select>
+      <select id="portfolio">
+    select 
+        no
+        ,  category
+        ,  subject
+        ,  content
+        ,  imgSrc
+        ,  imgWidth
+        ,  imgHeight
+    FROM introduce.artwork
+    </select>
+</mapper>

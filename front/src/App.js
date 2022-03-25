@@ -1,11 +1,13 @@
-import Funcom from './component/Functioncomponent';
-import Classcom from './component/Classcomponent';
+// import Funcom from './component/Functioncomponent';
+// import Classcom from './component/Classcomponent';
+import Conent_interview from './component/interview';
+
 
 function App() {
   return (
-    <div className="App">
-      <Funcom></Funcom>
-      <Classcom></Classcom>
+    <div>
+      <h2>Restful API</h2>
+      <Conent_interview botable='aws'></Conent_interview>
    
     </div>
   );

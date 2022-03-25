@@ -4,7 +4,11 @@ var express = require('express');
 var router = express.Router()
 
 router.get('/',(req,res) => {
-    res.send('해당 페이지를 찾을 수 없습니다.주소창을 확인해주세요')
+    res.send('localhost:3000/preinterview 로 리액트에서 요청해서 이문자를 보냄')
 })
+router.post('/',(req,res) => {
+    res.send('localhost:3000/preinterview/write 로 리액트에서 요청해서 글쓰기 폼태그 보여줄거임')
+})
+
 
 module.exports = router;

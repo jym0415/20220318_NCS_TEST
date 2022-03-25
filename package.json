@@ -2,18 +2,19 @@
   "name": "20220318test",
   "version": "1.0.0",
   "description": "",
-  "main": "jym.js",
+  "main": "yumi.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" :"nodemon jym.js",
-    "react" : "cd front && npm start",
-    "start" : "concurrently --kill-others-on-fail \"npm run server\" \"npm run react\" "
+    "server": "nodemon yumi.js",
+    "react": "cd front && npm start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run react\" "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^7.0.0",
     "express": "^4.17.3",
+    "mybatis-mapper": "^0.6.7",
     "mysql": "^2.18.1"
   }
 }

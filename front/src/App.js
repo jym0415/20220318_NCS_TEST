@@ -6,8 +6,8 @@ import Conent_interview from './component/interview';
 function App() {
   return (
     <div>
-      <h2>Restful API</h2>
-      <Conent_interview botable='aws'></Conent_interview>
+      <Conent_interview botable='interviewlist' titlenm='사전인터뷰'></Conent_interview>
+
    
     </div>
   );

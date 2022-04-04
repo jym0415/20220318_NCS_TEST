@@ -29,7 +29,7 @@ router.post('/',(req, res, next) => {//요청,응답,미들웨어or라우트
          case 'meetingwrite': req.body.crud = "insert"; 
                        req.body.mapper_id = "meetingInsert";
                        break;                                                 
-                                    
+        //포트폴리오                            
          default      : req.body.crud = "delete"; 
                         req.body.mapper_id = "interviewDrop";
                         break; 

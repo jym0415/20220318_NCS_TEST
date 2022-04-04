@@ -33,7 +33,7 @@ router.post('/',(req, res, next) => {
             if(req.body.crud == 'select' ){
                 res.send(rows); //react한테 res.data를 줘
             }else{
-                res.send("secc");  //succ라는 문자를줘  
+                res.send("success");  //succ라는 문자를줘  
             }
             });
         connection.release();//pool 연결한거 풀기

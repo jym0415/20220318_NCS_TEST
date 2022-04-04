@@ -6,7 +6,7 @@
         *
     FROM introduce.preinterview
     </select>
-      <select id="portfolio">
+    <select id="portfolio">
     select 
         no
         ,  category

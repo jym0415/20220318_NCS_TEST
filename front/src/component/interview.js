@@ -20,8 +20,8 @@ const Interview = (props) => {
                                     //select 전용
                                 try{
                                      console.log(result)
-                                     interviewIdUpdate([...result.data]); 
-                                    insertDB(result.data[result.data.length -1 ].keyno);                                                 
+                                    interviewIdUpdate([...result.data]); 
+                                    insertDB(result.data[result.data.length -1 ].wr_id);                                                 
                                     }
                                 catch(err){ console.log("타입확인 : " +err.message) }
                                  }
@@ -56,8 +56,8 @@ const Interview = (props) => {
              {
                  interviewId.map(( contant, i ) => {
                      return(
-                         <li key={contant.keyno}>
-                             <h3>{i+1} {contant.subject}</h3><div>{contant.content}</div>
+                         <li key={contant.wr_id}>
+                             <h3>{i+1} {contant.wr_subject}</h3><div>{contant.wr_content}</div>
                          </li>
                      )
                  })

@@ -2,33 +2,42 @@ import React from "react";
 import axios from 'axios';
 import $ from "jquery";
 
+
 export default function interviewform(props){
 
-const submitClick = (type, e) => {
+const submitClick = async (type, e) => { 
+    //비동기식,첫번째 인자: xml까지->sql 선택의 key 
+    //두번째 인자는 마우스피드백
+    //이벤트 리스너 ->함수저장 -> 객체의이벤트
 
-    const  fnValidate = (e) =>{
+    const  fnValidate = (e) =>{ //유효성검사->true,flase
             if(!$('#agreeTerm').is(':checked')){   
                 alert("동의하시게나");
                 $('label[for="agreeTerm"]').addClass('notice');                 
                 return false;
-            }else{
-                return true;
             }
-                    
+                // if(){
+                //     return false;
+                // }
+            return true; //제일아래있어야함.if를 다 통과하면 true값 반환
+      
           }
-      var time = new Date(); 
+
      
       if(fnValidate()){ // 동의했기때문에 데이터 모아서 이제 비동기로 노드한테 보내야겟다
-       
+        
+        //폼 필드에 내가 원하는대로 사용자가 데이터를 삽입
         var  jsonstr = decodeURIComponent($("[name='"+props.botable+"']").serialize());           
         var  json_form = JSON.stringify(jsonstr).replace(/\&/g, '\",\"') 
         json_form = "{\""+ json_form.replace(/=/gi, '\":\"') + "\"}"   
-  
+        //json화 시킴 -> 노드 에게주려고
+
+        //노드 -> xml -> sql
         try{
             axios({
-                url : `/preinterview?type=${props.botable}`,
+                url : `/preinterview?type=${props.botable}`, //요청
                 header : {
-                    "Content-Type" : "application/json",
+                    "Content-Type" : "application/json", //데이터변형을 막기위해 string화
                 },
                 method : "POST",
                 body : json_form
@@ -37,12 +46,18 @@ const submitClick = (type, e) => {
                 (result) => {  
                             try{
                                 console.log(result)
+                            
+                                    // if(){
+                                    //     alert("인터뷰 완료")
+                                    // }else{
+                                        
+                                    // }
                                                    
                                 }
                             catch(err){ console.log("타입확인 : " +err.message) }
                              }
         )
-         .catch ( e => { console.log(e +'이유로 데이터 못옴') }
+             .catch ( e => { console.log(e +'이유로 데이터 못옴') }
         ) 
         }
         catch(err){

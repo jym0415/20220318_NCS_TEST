@@ -4,7 +4,7 @@
     <select id="interview">
     select 
         *
-    FROM jym0415.band_write_youtube
+    FROM introduce.preinterview
     </select>
     <select id="portfolio">
     select 

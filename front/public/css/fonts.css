@@ -1,0 +1,58 @@
+/*fonts*/
+
+/*G마켓산스*/
+@font-face {
+    font-family: 'GmarketBold';
+    src: url(../fonts/GmarketSansTTFBold.ttf) format("ttf"),
+        url(../fonts/GmarketSansBold.otf) format("truetype"); 
+  }
+  @font-face {
+    font-family: 'GmarketMedium';
+    src: url(../fonts/GmarketSansTTFMedium.ttf) format("ttf"),
+        url(../fonts/GmarketSansMedium.otf) format("truetype"); 
+  }
+  @font-face {
+    font-family: 'GmarketLignt';
+    src: url(../fonts/GmarketSansTTFLight.ttf) format("ttf"),
+        url(../fonts/GmarketSansLight.otf) format("truetype"); 
+  }
+
+/*나눔스퀘어*/
+  @font-face {
+    font-family: 'NanumSquare';
+    src: url(../fonts/nanum-square/NanumSquareR.eot);
+    src: url(../fonts/nanum-square/NanumSquareR.eot?#iefix) format("embedded-opentype"), 
+         url(../fonts/nanum-square/NanumSquareR.woff) format("woff"), 
+         url(../fonts/nanum-square/NanumSquareR.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareL';
+    src: url(../fonts/nanum-square/NanumSquareL.eot);
+    src: url(../fonts/nanum-square/NanumSquareL.eot?#iefix) format("embedded-opentype"), 
+         url(../fonts/nanum-square/NanumSquareL.woff) format("woff"), 
+         url(../fonts/nanum-square/NanumSquareL.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareEB';
+    src: url(../fonts/nanum-square/NanumSquareEB.eot);
+    src: url(../fonts/nanum-square/NanumSquareEB.eot?#iefix) format("embedded-opentype"), 
+         url(../fonts/nanum-square/NanumSquareEB.woff) format("woff"), 
+         url(../fonts/nanum-square/NanumSquareEB.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareB';
+    src: url(../fonts/nanum-square/NanumSquareB.eot);
+    src: url(../fonts/nanum-square/NanumSquareB.eot?#iefix) format("embedded-opentype"),
+         url(../fonts/nanum-square/NanumSquareB.woff) format("woff"), 
+         url(../fonts/nanum-square/NanumSquareB.ttf) format("truetype");
+  }
+
+  /*마루부리*/
+  @font-face {
+    font-family: 'MaruBuri';
+    src: url(../fonts/MaruBuri-Regular/MARUBuriBetaR.woff) format("woff"), 
+         url(../fonts/MaruBuri-Regular/MaruBuri-Regular.otf) format("embedded-opentype");
+  }

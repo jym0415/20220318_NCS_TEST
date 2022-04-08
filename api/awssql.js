@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var mybatisMapper = require('mybatis-mapper')
 // var dbconfig = require('../db/config.js')   
-var dbconfig = require('../db/mycafe24')
+var dbconfig = require('../db/config.js')
 
 var router = express.Router()
 var pool = mysql.createPool(dbconfig);
@@ -24,7 +24,7 @@ router.post('/',(req, res, next) => {
 
     pool.getConnection(function(err, connection){
 
-        if(err) console.log("DB접속불가 : " +err);
+        if(err) console.log("DB접속불가 db정보확인 : " +err);
 
         connection.query(
         query,    //sql문이 들어와야 에러안남

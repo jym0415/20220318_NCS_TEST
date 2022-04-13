@@ -12,7 +12,99 @@
 }
 
 #hd{font-family: 'GmarketMedium','NanumSquare',sans-serif;}
-#hd{
+.hdtop{
+    padding-top: 15%;
     h2{
+        font-size: 4rem;
         font-family: 'GmarketBold','NanumSquare',sans-serif;}
+    }   
+.hdmain{
+    h3{
+        font-size: 3rem;
+        font-weight: bold;
+    }
 }
+@media(max-width : 768px){
+    .hdmain{
+        h3{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+} 
+@media(min-width : 992px){
+    .hdtop{
+        padding-top: 18%;
+        padding-bottom: 2rem;
+    }
+    .hdRight{
+        li{
+            font-size: 1.5rem;
+        }
+    }
+    .hdlicense{
+        p{
+            font-size: 1.5rem;
+        }
+    }
+   .hdskills{
+       .progress-title{
+            font-size: 1.5rem;
+            line-height: 5;
+       }
+       span{
+            font-size: 1.5rem;
+       }
+   }
+}
+
+
+/*img*/
+.hdLeft{
+    position: relative;}
+.hdmainimg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.hdimg{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-image: url(/img/mainimg1.JPG);
+    background-position: center;
+}
+
+/*hdskills*/
+.hdskills{white-space: nowrap;}
+@keyframes animate-positive{
+    0%{ width: 0; }
+}
+.progress-title{
+    line-height: 2;
+    color: #000;
+}
+.progress{
+    margin-right: 2rem;
+    width: 90%;
+    height: 2px;
+    background: rgb(183, 181, 181);
+}
+.progress .progress-bar{
+    background: rgb(0, 0, 0);
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+    animation-direction:normal;
+}
+
+.HTML5{width: 80%;}
+.js{width: 70%;}
+.node{width: 65%;}
+.mysql{width: 70%;}
+.photo{width: 80%;}
+.figma{width: 85%;}
+
+

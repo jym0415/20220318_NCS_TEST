@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="IntroduceSql">
-    <select id="interview">
-    select 
-        *
-    FROM introduce.preinterview
-    </select>
-    <select id="portfolio">
-    select 
-        no
-        ,  category
-        ,  subject
-        ,  content
-        ,  imgSrc
-        ,  imgWidth
-        ,  imgHeight
-    FROM introduce.artwork
+<mapper namespace="introduceSQL">
+    <select id="interviewList">
+        select 
+            *
+        from introduce.preinterview
+        order by keyno desc
     </select>
     <insert id="interviewInsert">
-    INSERT INTO 
-        introduce.preinterview (
-            subject
-            , content
-        ) 
-        VALUES (
-            '제목자리'
-            , '내용자리'
-        );
-
+        insert into 
+            introduce.preinterview (
+                subject                
+                , content 
+            )
+            values (
+                 #{wr_subject}
+                ,  #{wr_content}
+            )
     </insert>
-    <insert id="interviewInsertReview">
-    INSERT INTO 
-        introduce.preinterview.review (
-            subject
-            , content
-            <if test=" isimgSrc != '' && isimgSrc != null ">
-            , imgSrc
-            , imgidentity
-            <if>
-            , date
-        ) 
-        VALUES (
-            '제목자리'
-            , '내용자리'
-            <if test=" isimgSrc != '' && isimgSrc != null ">
-            , #{isimgSrc}
-            , #{isimgidentity}
-            <if>
-            , '개발코드'
-        );
-
-    </insert>
+    <insert id="interviewForm">
+        insert into 
+            introduce.offer (
+                companynm
+                , contacthp  
+                , interviewDT
+                , jobposition
+            )
+            values (
+                #{companynm}
+                , #{contacthp}  
+                , #{interviewDT}
+                , #{jobposition}
+            )
+    </insert>  
+    <delete id="interviewDelete">
+        delete from
+           introduce.preinterview
+        where 
+            keyno = #{keyno}
+    </delete> 
+   
 </mapper>
+
